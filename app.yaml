@@ -10,7 +10,18 @@ handlers:
   upload: index.html
   secure: always
 
-- url: /(.*)
-  static_files: /\1
-  upload: /(.*)
+- url: /(.+)/
+  static_files: \1/index.html
+  upload: (.+)/index.html
+  secure: always
+
+- url: /(.+)
+  static_files: \1/index.html
+  upload: (.+)/index.html
+  secure: always
+
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: \1
+  upload: (.*\.css)
   secure: always
