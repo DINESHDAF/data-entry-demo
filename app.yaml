@@ -25,3 +25,9 @@ handlers:
   static_files: \1
   upload: (.*\.css)
   secure: always
+
+- url: /(.*\.js)
+  mime_type: text/js
+  static_files: \1
+  upload: (.*\.js)
+  secure: always
